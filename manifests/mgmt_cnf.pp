@@ -38,6 +38,6 @@ define percona::mgmt_cnf (
     content => template("${module_name}/mgmt_cnf.erb"),
   }
 
-  Percona::Mgmt_cnf<| |> -> Percona::Database<| |> -> Percona::Rights<| |>
+  Percona::Mgmt_cnf -> Percona::Database -> Percona::Rights
 
 }
